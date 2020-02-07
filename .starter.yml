@@ -1,0 +1,18 @@
+questions:
+  - message: Application name
+    name: "application_name"
+    type: input
+    regexp: ^[a-z0-9\-]+$
+    help_msg: Must be lowercase characters or digits or hyphens.
+
+  - message: GitHub repository owner
+    name: "github_owner"
+    type: input
+    regexp: ^[a-zA-Z0-9\-_]*$
+    help_msg: Enter name of the GitHub organisation where repository should be created or your username to create repository under your personal account.
+
+tasks:
+  - command: [ "go-starter-replace" ]
+  - command: [ "go-starter-github", "$github_owner", "$application_name" ]
+  - command: [ "rm", ".starter.yml" ]
+
