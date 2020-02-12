@@ -15,4 +15,3 @@ tasks:
   - command: [ "go-starter-replace" ]
   - command: [ "go-starter-github", "$github_owner", "$application_name" ]
   - command: [ "rm", ".starter.yml" ]
-
